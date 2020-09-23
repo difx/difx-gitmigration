@@ -1,0 +1,55 @@
+http://www.catb.org/~esr/reposurgeon/repository-editing.html#conversion
+
+PATH=~/github/reposurgeon:$PATH
+
+repotool initialize difx
+
+emacs Makefile
+* set REMOTE_URL = https://svn.atnf.csiro.au/difx
+
+make stubmap
+
+(first does "repotool mirror https://svn.atnf.csiro.au/difx difx-mirror", result is 375 meg dir and 1 gig stream, takes ~ 6 hours?)
+(this svn mirror is also used by difx-svn2git)
+
+emacs difx.map
+
+make  # took 1 minute
+
+$ git branch --list
+  applications
+  deprecated
+  doc
+  libraries
+* master
+  master_tags
+  mpifxcorr
+  setup
+  sites
+  tests
+  utilities
+  virtualtrunk
+
+$ git tag --list | head
+emptycommit-1212
+emptycommit-1238
+emptycommit-1244
+emptycommit-1268
+emptycommit-1457
+
+...
+
+git checkout master_tags
+# There's one directory for every release here -- and no file history
+
+git checkout mpifxcorr
+cd trunk
+# full histories here
+
+Step 3: Sanity checking
+
+make allcompare  # a few problems
+
+reprosurgeon
+read difx-git
+lint

@@ -1,0 +1,42 @@
+https://www.atlassian.com/git/tutorials/svn-to-git-prepping-your-team-migration
+
+https://bitbucket.org/atlassian/svn-migration-scripts/downloads/svn-migration-scripts.jar
+# dated 2-2014
+
+$ java -jar ~/svn-migration-scripts.jar verify
+
+$ java -jar ~/svn-migration-scripts.jar authors https://svn.atnf.csiro.au/difx > authors.txt
+
+difx svn layout is very complicated, multiple things and a /virtualtrunk, /master_tags
+
+let's convert one thing:
+mpifxcorr: has /branches, /tags, /trunk
+utilities, /branches, /trunk
+applications/*, /trunk
+deprecated/*, /trunk
+sites/NRAO, /trunk
+sites/USNO, /trunk
+
+$ time git svn clone --stdlayout --authors-file=authors.txt https://svn.atnf.csiro.au/difx/mpifxcorr difx/mpifxcorr
+# took 7m53s
+
+$ java -Dfile.encoding=utf-8 -jar ~/sao/difx-migration/svn-migration-scripts.jar clean-git --force
+
+$ git branch --list
+  busch
+  codif
+  codif2
+  debugfix5b
+  difx-2.5-polyphasefilterbank
+  fakedatastream
+  fixvmux
+  linear2circular
+* master
+  newmonitor
+  nolsb
+  outputbands
+  radioastron20140201
+  rfi
+  vdifdeclumping
+
+but no tags
