@@ -43,7 +43,12 @@ backups/DiFX-2.3@5834
 backups/DiFX-2.4.1@7602
 backups/DiFX-RA-1.0.0@7601
 
-# make none-bare repo
-git clone difx.git difx-git  # non-bare
-cd difx-git
+# pack the repo
+cd difx-svn2git-tryN.git
+git repack -a -d -f
+cd ..
+
+# make none-bare repo with all branches local
+git clone difx-svn2git-tryN.git difx-svn2git-tryN  # non-bare
+cd difx-svn2git-tryN
 (cd ../difx.git/refs/heads && echo *) | xargs -n 1 git checkout
