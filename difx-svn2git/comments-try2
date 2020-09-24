@@ -1,0 +1,29 @@
+* same as try1, the files in branches such as DiFX-2.6.2 don't have any history.
+
+* ... but all of the master_tags have become branches, and the branches/ and tags/ are all present
+
+* DONE (try3+) we don't have the mapping of r1234 -> git hash, it would be good to have.
+  "git svn" appends that to the commit messages? 
+  try these:
+  --add-metadata  # works `svn path=/applications/difx2fits/trunk/; revision=9734`
+  --add-metadata-notes  # did not try
+
+* TODO build the result
+* TODO build some branches
+* TODO basic travis-ci setup
+* WAIT rename master to main? -- github is making tooling for end-of-2020
+
+Questions from reading the docs and examples:
+
+* Do we want everything to be git branches (as in try2) or try for tags?
+   like so:
+    branch refs/tags/v4.4.0
+    annotated true  # optional
+
+* the kde docs recommend running "gitk --all" and stare at the tree
+   branches that start "nowhere" are bad
+   same for tags
+
+* study https://invent.kde.org/sdk/kde-ruleset.git ?
+
+

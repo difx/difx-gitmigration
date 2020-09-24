@@ -11,7 +11,8 @@ make
 # use the mirror of the svn repo that reposurgeon downloaded
 rsync -a ../difx-reposurgeon/difx-mirror .
 
-~/github/svn2git/svn-all-fast-export --identity-map ../difx-reposurgeon/difx.map --rules rules-tryN difx-mirror
+~/github/svn2git/svn-all-fast-export --identity-map ../difx-reposurgeon/difx.map --rules rules-tryN --add-metadata difx-mirror
+# try3+: --add-metadata to get the rNNNN into the commit message
 
 [lindahl@rd difx.git (BARE:master)]$ git branch --list
   DiFX-2.2
