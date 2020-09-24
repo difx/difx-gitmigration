@@ -15,10 +15,11 @@
 
 Questions from reading the docs and examples:
 
-* Do we want everything to be git branches (as in try2) or try for tags?
-   like so:
+* NO Do we want everything to be git branches (as in try2) or try for tags?
+  like so:
     branch refs/tags/v4.4.0
     annotated true  # optional
+  it worked, but is more awkward than a branch, and the file history is still missing for DiFX-2.6.2 etc
 
 * the kde docs recommend running "gitk --all" and stare at the tree
    branches that start "nowhere" are bad
