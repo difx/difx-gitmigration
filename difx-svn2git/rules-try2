@@ -1,0 +1,58 @@
+create repository difx-svn2git-try2.git
+end repository
+
+match /master_tags/([^/]+)/
+  repository difx-svn2git-try2.git
+  branch \1
+end match
+
+match /(mpifxcorr|utilities)/trunk/
+  repository difx-svn2git-try2.git
+  prefix \1/
+  branch master
+end match
+
+match /(mpifxcorr|utilities)/branches/([^/]+)/
+  repository difx-svn2git-try2.git
+  prefix \1/
+  branch \1-\2
+end match
+
+match /(mpifxcorr|utilities)/tags/([^/]+)/
+  repository difx-svn2git-try2.git
+  prefix \1/
+  branch tag-\1-\2
+end match
+
+match /(applications|doc|libraries|sites)/([^/]+)/trunk/
+  repository difx-svn2git-try2.git
+  prefix \1/\2/
+  branch master
+end match
+
+match /(applications|doc|libraries|sites)/([^/]+)/branches/([^/]+)/
+  repository difx-svn2git-try2.git
+  prefix \1/\2/
+  branch \1-\2-\3
+end match
+
+match /(applications|doc|libraries|sites)/([^/]+)/tags/([^/]+)/
+  repository difx-svn2git-try2.git
+  prefix \1/\2/
+  branch tag-\1-\2-\3
+end match
+
+match /(virtualtrunk)/
+  repository difx-svn2git-try2.git
+  prefix \1/
+  branch master
+end match
+
+match /(setup|tests)/
+  repository difx-svn2git-try2.git
+  prefix \1/
+  branch master
+end match
+
+match /*/
+end match
