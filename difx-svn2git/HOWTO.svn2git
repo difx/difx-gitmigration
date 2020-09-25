@@ -1,48 +1,27 @@
 https://github.com/svn-all-fast-export/svn2git
 https://techbase.kde.org/Projects/MoveToGit/UsingSvn2Git
 
+# install svn2git
 # no install instructions on centos, here's what I needed
 yum install qt-devel apr-devel subversion-devel
 
 cd svn2git
 qmake-qt4
 make
+# added the binary to my PATH
+
+# cd to the svn2git workspace
 
 # use the mirror of the svn repo that reposurgeon downloaded
+# (see HOWTO.reposurgeon)
 rsync -a ../difx-reposurgeon/difx-mirror .
 
-~/github/svn2git/svn-all-fast-export --identity-map ../difx-reposurgeon/difx.map --rules rules-tryN --add-metadata difx-mirror
-# try3+: --add-metadata to get the rNNNN into the commit message
+try2:
+~/github/svn2git/svn-all-fast-export --identity-map ../difx-reposurgeon/difx.map --rules rules-try2 difx-mirror
 
-[lindahl@rd difx.git (BARE:master)]$ git branch --list
-  DiFX-2.2
-  DiFX-2.3
-  DiFX-2.3.1
-  DiFX-2.4
-  DiFX-2.5
-  DiFX-2.5.1
-  DiFX-2.5.2
-  DiFX-2.5.3
-  DiFX-2.6
-  DiFX-2.6.1
-  DiFX-2.6.2
-  DiFX-RA-1.0.0
-  DiFX-RA-1.0.1
-  main
+try3:
+~/github/svn2git/svn-all-fast-export --identity-map ../difx-reposurgeon/difx.map --rules rules-try3 --add-metadata difx-mirror
 
-[lindahl@rd difx.git (BARE:master)]$ git tag --list
-backups/CIRA-DiFX-1.0@4078
-backups/DiFX-1.5.0@7602
-backups/DiFX-1.5.1@7602
-backups/DiFX-1.5.2@7602
-backups/DiFX-1.5.3@7602
-backups/DiFX-1.5.4@7602
-backups/DiFX-2.0.0@7602
-backups/DiFX-2.0.1@7602
-backups/DiFX-2.1@7602
-backups/DiFX-2.3@5834
-backups/DiFX-2.4.1@7602
-backups/DiFX-RA-1.0.0@7601
 
 # pack the repo
 cd difx-svn2git-tryN.git
@@ -52,4 +31,10 @@ cd ..
 # make none-bare repo with all branches local
 git clone difx-svn2git-tryN.git difx-svn2git-tryN  # non-bare
 cd difx-svn2git-tryN
-(cd ../difx.git/refs/heads && echo *) | xargs -n 1 git checkout
+(cd ../difx-svn2git-tryN.git/refs/heads && echo *) | xargs -n 1 git checkout
+
+# and when you're ready to upload
+cd difx-svn2git-tryN.git  # yes, the bare repo
+git remote add origin git@github.com:difx/difx-svn2git-tryN.git
+git branch -M master
+git push -u origin --all  # not just master

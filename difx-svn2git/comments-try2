@@ -8,6 +8,26 @@
   --add-metadata  # works `svn path=/applications/difx2fits/trunk/; revision=9734`
   --add-metadata-notes  # did not try
 
+* DONE what am I still dropping in try2?
+   done try3 README.txt and index.html in top level directory
+   applications/ -- 21 in the websvn, 21 in try2
+   done try3 deprecated/ -- all missing -- pulseprofile/ has no trunk, maybe others hiding in there
+   done try3 doc/difxhelp missing -- has no trunk (but userguide does and is ok)
+   ok libraries/ -- missing difxbase, which does have a trunk but it's empty in the tip
+      also empty in difx-reposurgeon
+      adeller says it was always empty
+   done try3 2 release*.pl files in master_tags/
+   mpifxcorr -- ok
+   setup -- ok
+   donetry3 sites -- NRAO ok, missing a bunch of other directories with no trunks
+   tests -- ok
+   utilities -- ok
+   virtualtrunk -- ok
+  done try3 try a crash-only policy for unconverted files
+   added a ton of rules to try3
+   /common/mark5access/branches/NRAO-DiFX-1.1/ChangeLog
+   /master_branches/master_trunk/README.txt
+     decided to skip TODO ask about this history
 * TODO build the result
 * TODO build some branches
 * TODO basic travis-ci setup
@@ -24,6 +44,16 @@ Questions from reading the docs and examples:
 * the kde docs recommend running "gitk --all" and stare at the tree
    branches that start "nowhere" are bad
    same for tags
+  Problem: utilities-NRAO-DiFX-1.1 branch appears to start de-novo, probably similar to all other DiFX-N branches? later removed
+    in try2 the first checkin is 35cc33e172fd710e39bfc95ff2e6c76c492b63b8
+    it's a 17k line diff
+    then removed in 9290d2b598d1d1b722a7f97e12598a90ce0b3650, with no further checkins
+    TODO consider shooting out these 2 changesets
+  Problem: "Walter's branch" mpifxcorr-wbrisken-NativeMark5 appears to start de-novo, was eventually removed in 2011
+    in try2 the first checkin is ae7fca37c136e46c25e42bdee105de671fa24bb6
+    it's a 49k line diff
+    has checkins by Walter Oct 2007-Jan 2008
+  So apparently that's not too bad!
 
 * study https://invent.kde.org/sdk/kde-ruleset.git ?
 
