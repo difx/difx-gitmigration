@@ -17,10 +17,10 @@ make
 rsync -a ../difx-reposurgeon/difx-mirror .
 
 try2:
-~/github/svn2git/svn-all-fast-export --identity-map ../difx-reposurgeon/difx.map --rules rules-try2 difx-mirror
+~/github/svn2git/svn-all-fast-export --identity-map authors.map --rules rules-try2 difx-mirror
 
 try3:
-~/github/svn2git/svn-all-fast-export --identity-map ../difx-reposurgeon/difx.map --rules rules-try3 --add-metadata difx-mirror
+~/github/svn2git/svn-all-fast-export --identity-map authors.map --rules rules-try3 --add-metadata difx-mirror
 
 
 # pack the repo
