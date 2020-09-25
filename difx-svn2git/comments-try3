@@ -1,0 +1,10 @@
+* same as try[12], the files in branches such as DiFX-2.6.2 don't have any history.
+
+* rules-try3 now matches all of the files, so it's a lot more complete
+
+* r1234 svn revision names are now in all checkin comments
+
+* TODO build the result
+* TODO build some branches
+* TODO basic travis-ci setup
+* WAIT rename master to main? -- github is making tooling for end-of-2020
