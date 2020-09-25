@@ -1,0 +1,111 @@
+create repository difx-svn2git-try3.git
+end repository
+
+match /master_tags/([^/]+)/
+  repository difx-svn2git-try3.git
+  # no prefix, everything moves to the top
+  branch \1
+end match
+
+match /master_tags/
+  # 2 files, release*.pl
+  repository difx-svn2git-try3.git
+  prefix /master_tags/
+  branch master
+end match
+
+match /(vlba_utils|difx_monitor|DiFXGUI)/
+  # added in try3 to resolve crashes with no wildcard -- apprently these were later moved into utilities/ ?
+  # TODO check try2 for the history of these files
+  # TODO compare with try3 history of thse files
+  repository difx-svn2git-try3.git
+  prefix \1/
+  branch master
+end match
+
+match /(mpifxcorr|utilities)/trunk/
+  repository difx-svn2git-try3.git
+  prefix \1/
+  branch master
+end match
+
+match /(mpifxcorr|utilities)/branches/([^/]+)/
+  repository difx-svn2git-try3.git
+  prefix \1/
+  branch \1-\2
+end match
+
+match /(mpifxcorr|utilities)/tags/([^/]+)/
+  repository difx-svn2git-try3.git
+  prefix \1/
+  branch \1-svntag-\2
+end match
+
+match /utilities/([^/]+)/trunk/
+  # added in try3 for no wildcard crash
+  # example1: calc, does not collide TODO CHECK
+  # example2: filemanip, does collide with utilities/trunk/filemanip TODO CHECK
+  repository difx-svn2git-try3.git
+  prefix /utilities/\1/
+  branch master
+end match
+
+match /utilities/([^/]+)/
+  # added in try3 for no wildcard crash
+  # example: /utilities/difx2ms/
+  repository difx-svn2git-try3.git
+  prefix /utilities/\1/
+  branch master
+end match
+
+match /(applications|doc|libraries|sites|common)/([^/]+)/trunk/
+  # common added in try3 TODO CHECK
+  repository difx-svn2git-try3.git
+  prefix \1/\2/
+  branch master
+end match
+
+match /(applications|doc|libraries|sites|common)/([^/]+)/branches/([^/]+)/
+  # common added in try3 TODO CHECK
+  repository difx-svn2git-try3.git
+  prefix \1/\2/
+  branch \1-\2-\3
+end match
+
+match /(applications|doc|libraries|sites)/([^/]+)/tags/([^/]+)/
+  repository difx-svn2git-try3.git
+  prefix \1/\2/
+  branch \1-\2-svntag-\3
+end match
+
+match /(applications|doc|libraries|sites)/([^/]+)/
+  repository difx-svn2git-try3.git
+  prefix \1/\2/
+  branch master
+end match
+
+match /(virtualtrunk)/
+  repository difx-svn2git-try3.git
+  prefix \1/
+  branch master
+end match
+
+match /(setup|tests|deprecated)/  # try3 added deprecated TODO check
+  repository difx-svn2git-try3.git
+  prefix \1/
+  branch master
+end match
+
+match /(README.txt|index.html|make-difx1.0|setup.difx.bash|make-difx.trunk|setup-difx.trunk|setup.difx.csh|make-difx.osx|install-difx|setup.bash|foo)
+  repository difx-svn2git-try3.git
+  prefix \1
+  branch master
+end match
+
+match /master_branches/
+  # this was later deleted, so let's skip it
+end match
+
+# comment out to crash on unknown files
+#match /*/
+#end match
