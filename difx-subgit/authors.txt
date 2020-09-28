@@ -1,0 +1,38 @@
+#
+# This is SubGit authors mapping file.
+# Authors mapping is used to map Subversion committers names to Git committers names and vice versa.
+#
+# This file uses git-svn format, as described at 'http://www.kernel.org/pub/software/scm/git/docs/git-svn.html'
+# and consists of the lines in the following format:
+#
+# svnUser = Git User <user@example.com>
+# 
+
+
+AdamDeller = adamdeller <adeller@swin.edu.au>
+CherieDay = CherieDay <cday@swin.edu.au>
+ChrisPhillips = XhrisPhillips <Chris.Phillips@csiro.au>
+CormacReynolds = CormacReynolds <Cormac.Reynolds@csiro.au>
+DavidGordon = DavidGordon <david.gordon-1@nasa.gov>
+FredericJaron = FredericJaron <FredericJaron@example.com>
+GeoffreyCrew = GeoffreyCrew <gbc@haystack.mit.edu>
+HelgeRottmann = HelgeRottmann <rottmann@mpifr-bonn.mpg.de>
+JamesAnderson = JamesAnderson <jamesanderson@domain.com>
+JanWagner = jwagnerhki <jan.wagner@iki.fi>
+JimJacobs = JimJacobs <jjacobs@nrao.edu>
+JohnBarrett = JohnBarrett <barrettj@mit.edu>
+JohnMorgan = JohnMorgan <mojoh81@gmail.com>
+JohnSpitzak = JohnSpitzak <john.spitzak.ctr@usno.navy.mil>
+LeonidPetrov = LeonidPetrov <LeonidPetrov@atnf.csiro.au>
+MahmoudMahmoud = MahmoudMahmoud <MahmoudMahmoud@example.com>
+MarkWainright = MarkWainright <MarkWainright@atnf.csiro.au>
+MatthiasBark = MatthiasBark <matthiasbark@domain.com>
+MichaelDutka = MichaelDutka <MichaelDutka@atnf.csiro.au>
+NicolasPradel = NicolasPradel <septimussonh@gmail.com>
+RandallWayth = RandallWayth <R.Wayth@curtin.edu.au>
+RichardDodson = RichardDodson <richard.dodson@uwa.edu.au>
+RogerCappallo = RogerCappallo <roger.cappallo@gmail.com>
+TonyMaher = TonyMaher <tonymaher@domain.com>
+WalterAlef = WalterAlef <alef@mpifr-bonn.mpg.de>
+WalterBrisken = WalterBrisken <wbrisken@aoc.nrao.edu>
+ZhengMeyerZhao = zhengmeyer <zhengmeyerzhao@domain.com>
