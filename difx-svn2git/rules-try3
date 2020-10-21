@@ -90,9 +90,9 @@ match /(virtualtrunk)/
   branch master
 end match
 
-match /(setup|tests|deprecated)/  # try3 added deprecated TODO check
-  repository difx-svn2git-try3.git
-  prefix \1/
+match /(setup|tests|deprecated)/  # try3 added deprecated
+  repository difx-svn2git-try3.git 
+ prefix \1/
   branch master
 end match
 

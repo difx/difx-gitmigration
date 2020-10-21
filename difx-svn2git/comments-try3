@@ -1,19 +1,61 @@
-* same as try[12], the files in branches such as DiFX-2.6.2 don't have any history.
+* EXPECTED same as try[12], the files in branches such as DiFX-2.6.2 don't have any history.
 
-* rules-try3 now matches all of the files, so it's a lot more complete
-* r1234 svn revision names are now in all checkin comments
+* IMPROVEMENT rules-try3 now matches all of the files, so it's a lot more complete
+* IMPROVEMENT r1234 svn revision names are now in all checkin comments
 
-* not-actually-bugs
+* OK not-actually-bugs
 
 deprecated/{fringetool,vlba_utils} are in release.pl but are not in the git repo
 
 /deprecated/vlba_utils/ was deleted in r4078
 /deprecated/fringetool/ was deleted in r4078
 
-they are not actually in the svn checkout either
+they are not actually in the svn 2.6.2 etc. checkout either
 
 so this is not actually a bug
 
+* TODO incomplete branches
 
+pick a branch that's ahead of master
+see if I can inflate it to be complete and buildable
+utility to print the date of the last checkin in every branch?
 
+* clear the TODOs in rules-try3
 
+BUG: /applications/*/trunk not being resolved, 6 directories, /libraries/*/trunk not being resolved, 3 directories
+  This worked in try2
+  The only change in try3 was to add common to the list ?
+
+BUG? applications/calcserver/trunk in DiFX-2.5 but not other similar branches from master_tags ??
+ 
+
+match /(vlba_utils|difx_monitor|DiFXGUI)/
+  # added in try3 to resolve crashes with no wildcard -- apprently these were later moved into utilities/ ?
+  # TODO check try2 for the history of these files
+  # TODO compare with try3 history of thse files
+applications/DiFXGUI
+applications/difx_monitor
+vlba_utils is gone?
+
+match /utilities/([^/]+)/trunk/
+  # added in try3 for no wildcard crash
+  # example1: calc, does not collide OK
+  # example2: filemanip, does collide with utilities/trunk/filemanip OK
+  utilities/filemanip vs utilities/trunk/filemanip
+  filemanip/extract_second5B.py not in the trunk
+
+match /(applications|doc|libraries|sites|common)/([^/]+)/trunk/
+  # common added in try3 OK
+  in master with \1\2 prefix
+  are there any collisions? -- can't be, everything is in trunk or branches
+  nothing in the final repo
+  what was that command to show deleted git files?
+  git log --diff-filter=D --summary
+  common was renamed to libraries in 2008
+  let's follow one file libraries/vdifio/README
+
+match /(applications|doc|libraries|sites|common)/([^/]+)/branches/([^/]+)/
+  # common added in try3 OK
+  all in branches
+
+OK match /(setup|tests|deprecated)/  # try3 added deprecated
