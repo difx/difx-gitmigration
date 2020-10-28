@@ -1,0 +1,9 @@
+In try4, the rename from trunk/* to ./* is done after conversion.
+
+That appears to have fixed the weirdnesses noted in comments-try3.
+
+I was able to build branches with/without IPP, and master with
+IPP. The master build is proof that the weirdness is fixed.
+
+try5: incrementally update difx-mirror
+
