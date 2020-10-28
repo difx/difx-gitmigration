@@ -5,5 +5,62 @@ That appears to have fixed the weirdnesses noted in comments-try3.
 I was able to build branches with/without IPP, and master with
 IPP. The master build is proof that the weirdness is fixed.
 
+For file history, --follow is needed due to the git mv for trunk
+
+e.g. git log -p --follow applications/difx2mark4/src/root_id.c
+
+These look problemmatic, all of them appear to delete the file?
+----------------------------------------------------------------------
+commit 9f8d8d9b9fe64990648dbb9a59d08273f080ef16
+Author: ChrisPhillips <ChrisPhillips@example.com>
+Date:   Wed Mar 22 00:35:59 2017 +0000
+
+    Create codif branch
+    
+    svn path=/libraries/mark5access/branches/codif/; revision=7681
+
+commit 12f8a60e603be216cbcfc50bc8e6cc1d7c215ab6
+Author: WalterBrisken <WalterBrisken@example.com>
+Date:   Sun Jul 5 13:07:39 2015 +0000
+
+    Make new branch for multi-datastream work
+    
+    svn path=/applications/vex2difx/branches/multidatastream/; revision=6813
+
+commit 4725395f9ead98061dbbf35b2fcbb017770d528b
+Author: JohnSpitzak <JohnSpitzak@example.com>
+Date:   Wed Jul 6 15:52:28 2011 +0000
+
+    USNO development branch
+    
+    svn path=/applications/doi/branches/USNO/; revision=3532
+----------------------------------------------------------------------
+
+This is the rule:
+
+match /(applications|doc|libraries|sites|common)/([^/]+)/branches/([^/]+)/
+  repository difx-svn2git-try4.git
+  prefix \1/\2/
+  branch \1-\2-\3
+end match
+
+STDERR.try4:
+
+rev 3532 /applications/doi/branches/USNO/ matched rule: "rules-try4:59 /(applications|doc|libraries|sites|common)/([^/]+)/branches/([^/]+)/"    exporting. 
+WARN: Transaction: "applications-doi-USNO" is not a known branch in repository "difx-svn2git-try4.git" 
+Going to create it automatically 
+copy from branch "master" to branch "applications-doi-USNO" @rev 3531 
+"WARN: repository difx-svn2git-try4.git branch applications-doi-USNO has some files copied from master@3531" 
+adding "master@3531" : 3517 as a merge point 
+add/change dir ( /applications/doi/branches/USNO -> "applications-doi-USNO" "applications/doi/" ) 
+WARN: Branch "applications-doi-USNO" in repository "difx-svn2git-try4.git" doesn't exist at revision 3532 -- did you resume from the wrong revision? 
+
+STDOUT.try4:
+
+Exporting revision 3532 .++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 197 modifications from SVN /applications/doi/branches/USNO/ to difx-svn2git-try4.git/applications-doi-USNO done
+
+
+
+
 try5: incrementally update difx-mirror
 

@@ -50,7 +50,7 @@ git mv ./mpifxcorr/trunk/* ./mpifxcorr
 git mv ./sites/NRAO/trunk/* ./sites/NRAO
 git mv ./sites/USNO/trunk/* ./sites/USNO
 git mv ./utilities/trunk/* ./utilities
-find . -name trunk | xargs rmdir
+find . -name trunk | xargs rmdir  # these should be empty
 
 git commit -m 'move trunk to .' -a
 
