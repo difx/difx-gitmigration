@@ -14,20 +14,58 @@ they are not actually in the svn 2.6.2 etc. checkout either
 
 so this is not actually a bug
 
-* TODO incomplete branches
+* DONE examine incomplete branches -- no action
 
-pick a branch that's ahead of master
-see if I can inflate it to be complete and buildable
-utility to print the date of the last checkin in every branch?
+pick a branch that's ahead of master -- in applications/ or utilities/
+see if I can "inflate" it to be complete and buildable
+  mpifxcorr-outputbands -- 88 behind, 33 ahead -- ok this is just mpifxcorr
+    test1: branch mpifxcorr-outputbands, merge master
+       a billion conflicts at the merge
+    test2: branch master, merge mpifxcorr-outputbands
+      a billion conflicts at the merge
+  libraries-difxio-outputbands 88 behind, 13 ahead -- empty
+utility to print the date of the last checkin in every branch, so we can see which ones are stale?
+  github shows this, so not really needed
 
-* clear the TODOs in rules-try3
+* Examine the changes in try3
 
 BUG: /applications/*/trunk not being resolved, 6 directories, /libraries/*/trunk not being resolved, 3 directories
   This worked in try2
   The only change in try3 was to add common to the list ?
+  in try3, both libraries/* and libraries/*/trunk are populated with files -- ah but the trunk files are coming from the build ?
+  POST BUILD:  
+    example mark5access in DiFX-2.6.2-ci
+      Makefile.am in .
+      Makefile and Makefile.in in trunk/
+    and in mark5access master
+      Makefile.am in .
+      Makefile and Makefine.in and Makefile.am in trunk/
+  PRE BUILD:
+    trunk/ does not exist
+    building 2.6.2, trunk doesn't spring into existance
+    cleaned up
+    master: lots of trunk/
+      libraries/mark5access, trunk/AUTHORS is smaller (older?) than AUTHORS
+        April 2017 checkin to AUTHORS, also May 2010
+        mark5access/trunk/AUTHORS is svn path=/common/difxio/trunk/; revision=752 (in 2008)
+        mark5access/AUTHORS was created in svn path=/libraries/mark5access/trunk/; revision=2203 (in 2010)
+    similar problem with branches/
+BUG:
+  reverse problem: libraries/mark5access/doc/Makefile.am in DiFX-2.6.2 branch and not master
+     in git, . has 2 guides and trunk has Makefile.am and the 2 guides
+     the two guides are different in trunk and . -- trunk is ancient
+  this is totally an artifact in git? svn seems fine
+     ./git-trunk-collisions.py difx-svn2git-try3
+  stderr rules
+    rev 35 /common/mark5access/trunk/doc/Makefile.am matched rule: "rules-try3:61 /(applications|doc|libraries|sites|common)/([^/]+)/trunk/"    exporting. 
+    add/change file ( /common/mark5access/trunk/doc/Makefile.am -> "master" "common/mark5access/doc/Makefile.am" ) 
+    rev 41 /common/mark5access/trunk/doc/Makefile.am matched rule: "rules-try3:61 /(applications|doc|libraries|sites|common)/([^/]+)/trunk/"    exporting. 
+    add/change file ( /common/mark5access/trunk/doc/Makefile.am -> "master" "common/mark5access/doc/Makefile.am" ) 
+
+
 
 BUG? applications/calcserver/trunk in DiFX-2.5 but not other similar branches from master_tags ??
- 
+  ? does this depend on the state of the repo when the tags were made ? 
 
 match /(vlba_utils|difx_monitor|DiFXGUI)/
   # added in try3 to resolve crashes with no wildcard -- apprently these were later moved into utilities/ ?
