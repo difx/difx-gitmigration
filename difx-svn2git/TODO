@@ -1,0 +1,22 @@
+Done:
+
+* master branch builds in travis-ci
+* some branches build in travis-ci
+* /trunk/ is gone from the master branch
+
+Todo:
+
+* incrementally update difx-mirror to the latest and do that for all future tryN attempts
+* find all big files (test data?) and consider dropping them
+* find if the history has any big files that were deleted long ago
+* switch to the new github standard of calling the main branch "main"
+
+Before shipping
+
+* author map -- ask every author what email they would like to
+use. Needs to tie into their github ID, if they already have one
+
+Big unstarted task:
+
+* trac to github issue migration https://svn.atnf.csiro.au/trac/difx/
+* looks like lots of tools that do this, each abandoned by its author after they finished the migration they cared about
