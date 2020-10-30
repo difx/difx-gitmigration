@@ -11,26 +11,24 @@ if len(sys.argv) > 1:
 else:
     repo = '.'
 
-args = 'git log --all'.split()
+args = 'git log --all --pretty=format:checkin:%H:%d:%b --reverse'.split()
 
 completed = subprocess.run(args, cwd=repo, stdout=subprocess.PIPE, check=True, encoding='utf8')
 
-'''
-commit 62622d7826e42528d501cbe41fc85612072d71bd
-Author: WalterBrisken <WalterBrisken@example.com>
-Date:   Tue Sep 22 18:10:36 2020 +0000
-
-    Fix seg fault introduced when channel-based flagging was added.  Do some other minor clean-
-    
-    svn path=/applications/difx2fits/trunk/; revision=9734
-'''
-
 for line in completed.stdout.splitlines():
-    if line.startswith('commit '):
-        changeset = line.split()[1]
-    if line.startswith('    svn path='):
+    if line.startswith('checkin:'):
+        _, changeset, branch_etc, first = line.split(':', maxsplit=3)
+        branch = 'master'
+        if branch_etc == ' (tag':
+            _, first = first.split(':', maxsplit=1)
+            branch_etc = ''
+        if branch_etc.startswith(' ('):
+            branch = branch_etc.split(',')[1].strip().rstrip(')')
+        if first:
+            line = first
+    if line.strip().startswith('svn path='):
         pathrev = line.split('=', 1)[1]
         svn_path = pathrev.split(';', 1)[0]
         svn_rev = 'r' + pathrev.split('=', 1)[1]
 
-        print(svn_path, svn_rev, changeset)
+        print(branch, svn_path, svn_rev, changeset)
