@@ -1,4 +1,4 @@
-In try4, the rename from trunk/* to ./* is done after conversion.
+## In try4, the rename from trunk/* to ./* is done after conversion.
 
 That appears to have fixed the weirdnesses noted in comments-try3.
 
@@ -9,7 +9,7 @@ For file history, --follow is needed due to the git mv for trunk
 
 e.g. git log -p --follow applications/difx2mark4/src/root_id.c
 
-These look problemmatic, all of them appear to delete the file?
+## These look problemmatic, all of them appear to delete the file?
 ----------------------------------------------------------------------
 commit 9f8d8d9b9fe64990648dbb9a59d08273f080ef16
 Author: ChrisPhillips <ChrisPhillips@example.com>
@@ -59,8 +59,16 @@ STDOUT.try4:
 
 Exporting revision 3532 .++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 197 modifications from SVN /applications/doi/branches/USNO/ to difx-svn2git-try4.git/applications-doi-USNO done
 
+## New weirdness (ok this was also in try3)
 
+commit 89c81673a95a9ee81a6ec62b41077265a5811fb1
+Author: CormacReynolds <CormacReynolds@example.com>
+Date:   Wed Sep 10 12:46:50 2008 +0000
+    Renamed a couple of branch directories to the more usual name.
+    svn path=/applications/DiFXGUI/; revision=760
 
+renamed some branches from /branch/ to /branches/
+all of these were created in master, then the rename created an empty branch
 
-try5: incrementally update difx-mirror
+add a rule for /branch/ similar to branches
 
