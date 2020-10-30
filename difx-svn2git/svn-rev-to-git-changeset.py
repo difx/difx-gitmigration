@@ -11,7 +11,7 @@ if len(sys.argv) > 1:
 else:
     repo = '.'
 
-args = 'git log'.split()
+args = 'git log --all'.split()
 
 completed = subprocess.run(args, cwd=repo, stdout=subprocess.PIPE, check=True, encoding='utf8')
 
