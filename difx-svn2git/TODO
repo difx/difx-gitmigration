@@ -1,15 +1,19 @@
+Important decisions:
+
+* mimic git norms, so make /trunk/ disappear from file paths
+* there are 2 large binary files that could be vaporized to reduce repo size by 25%, but, the repo isn't very large
+* a few 
+
 Done:
 
 * master branch builds in travis-ci
 * some branches build in travis-ci
 * /trunk/ is gone from the master branch
-* find all big files (test data?) and consider dropping them
+* found big files (test output, ephemerides) and decided to keep them
 
 Todo:
 
 * incrementally update difx-mirror to the latest and do that for all future tryN attempts
-* find if the history has any big files that were deleted long ago
-* switch to the new github standard of calling the main branch "main"
 
 Before shipping:
 
@@ -17,5 +21,6 @@ Before shipping:
 
 Followups:
 
+* switch to the new github standard of calling the main branch "main"
 * trac to github issue migration https://svn.atnf.csiro.au/trac/difx/
-* looks like lots of tools that do this, each abandoned by its author after they finished the migration they cared about
+** looks like lots of tools that do this, each abandoned by its author after they finished the migration they cared about

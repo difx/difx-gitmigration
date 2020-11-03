@@ -61,14 +61,40 @@ Exporting revision 3532 .+++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 ## New weirdness (ok this was also in try3)
 
-commit 89c81673a95a9ee81a6ec62b41077265a5811fb1
-Author: CormacReynolds <CormacReynolds@example.com>
-Date:   Wed Sep 10 12:46:50 2008 +0000
-    Renamed a couple of branch directories to the more usual name.
-    svn path=/applications/DiFXGUI/; revision=760
+this applies to aquib? /branch/
 
-renamed some branches from /branch/ to /branches/
-all of these were created in master, then the rename created an empty branch
+difx_monitor/Makefile
+difx_monitor/trunk/Makefile  # ca1c1cf9037b55577cb2e41cd31f7594ee68aa90 r538
+  Exporting revision 538 .... 4 modifications from SVN /difx_monitor/ to difx-svn2git-try5.git/master done
+difx_monitor/branch/aquib/Makefile  # 90797c6475b38e5eba6a20919fcc603a85e6d03c r679
+  Exporting revision 679 .++ 3 modifications from SVN /difx_monitor/ to difx-svn2git-try5.git/master done
+  XXX rename does not trigger the rule? or was this an svn branch operation?
+  rev 679 /difx_monitor/branch/aquib/ matched rule: "rules-try5:38 /(vlba_utils|difx_monitor|DiFXGUI)/"    exporting. 
+  add/change dir ( /difx_monitor/branch/aquib -> "master" "difx_monitor/branch/aquib/" ) 
+applications/difx_monitor/branch/aquib/Makefile  # a7ca6977b6ae8b3511829704e5281fe2dde2087a r756
+  Exporting revision 756 ..++++++++++++++++++++++++++++++++++++++++++++++.++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++.++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++.++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++.++++.++++++++++++++++++++++++++++++++++++++++++++++++++++..... 486 modifications from SVN /DiFXGUI/ to difx-svn2git-try5.git/master done
+applications/difx_monitor/branches/aquib/Makefile  # fd765e18fc53c6574eed960b0756479632a70168 r760
 
-add a rule for /branch/ similar to branches
+added a rule for /branch/ similar to branches in a try5 candidate, did not work??
+| rev 354 /DiFXGUI/branch/mpifr_bonn/src/ matched rule: "rules-try5:17 /(DiFXGUI)/(branches|branch)/([^/]+)/"    exporting. 
+| add/change dir ( /DiFXGUI/branch/mpifr_bonn/src -> "applications-DiFXGUI-mpifr_bonn" "applications/DiFXGUI/src/" ) 
+the branch applications-DiFXGUI-mpifr_bonn is empty despite the above
+AHAH it was removed in 2011 r4078
+So that's why the *git branch* is empty
 
+so why is master applications/DiFXGUI/branch/mpifr_bonn/ not empty
+
+
+## This one doesn't have any /branch/ connection
+
+utilities/difx2fits/trunk/Makefile.am  # 
+utilities/difx2fits/branches/NRAO-DiFX-1.1/Makefile.am  # cbc288fa778d07175c05c4303f100c4912f08b82 r642
+applications/difx2fits/branches/NRAO-DiFX-1.1/Makefile.am  # a7ca6977b6ae8b3511829704e5281fe2dde2087a r756
+
+## Additional builds
+warts:
+--withhops configure.ac needs png12 changed to the actual name of the needed library (png16 on debian (varies by distro)
+--withguiserver is IPP-only
+--withdatasim is IPP-only
+have not tried
+--withpolconvert (needs CASA)
