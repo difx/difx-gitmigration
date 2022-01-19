@@ -18,8 +18,12 @@ CormacReynolds = CormacReynolds <Cormac.Reynolds@csiro.au>
 GeoffreyCrew = gbcrew <gbc@haystack.mit.edu>
 HelgeRottmann = HelgeRottmann <rottmann@mpifr-bonn.mpg.de>
 JanWagner = jwagnerhki <jan.wagner@iki.fi>
-WalterBrisken = wbrisken <wbrisken@aoc.nrao.edu>
+JimJacobs = JimNrao <jjacobs@nrao.edu>
+JohnBarrett = jpbarrett <barrettj@mit.edu>
+JohnMorgan = johnsmorgan <mojoh81@gmail.com>
+NicolasPradel = npradel <septimussonh@gmail.com>
 RandallWayth = rbw42 <R.Wayth@curtin.edu.au>
+WalterBrisken = wbrisken <wbrisken@aoc.nrao.edu>
 
 
 ## Check emails
@@ -42,7 +46,3 @@ MahmoudMahmoud = DiFX-DEV  <MahmoudMahmoud@example.com>
 MarkWainright = DiFX-DEV  <MarkWainright@atnf.csiro.au>
 MatthiasBark = DiFX-DEV <matthiasbark@domain.com>
 MichaelDutka = DiFX-DEV <MichaelDutka@atnf.csiro.au>
-NicolasPradel = DiFX-DEV <septimussonh@gmail.com>
-JohnBarrett = DiFX-DEV <barrettj@mit.edu>
-JimJacobs = DiFX-DEV <jjacobs@nrao.edu>
-JohnMorgan = DiFX-DEV  <mojoh81@gmail.com>
