@@ -114,3 +114,16 @@ In this way, I just got 21 commits with 13 tags.
 ## Try - 3
 
 git svn clone https://svn.atnf.csiro.au/difx --authors-file=authors.txt
+
+## mark5access
+
+Trying to migrate mark5access using subgit using the following command:
+
+```bash
+$ cat go-mark5access.sh
+```
+
+Using the configure file in `subgit-mark5access` directory.
+
+This method will generate 477 commits on 27 Oct 2021 with hash code 9ab3d49,
+with 3 branches and 16 tags(mainly the DiFX master-tags).
