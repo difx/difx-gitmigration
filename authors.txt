@@ -1,0 +1,48 @@
+#
+# This is SubGit authors mapping file.
+# Authors mapping is used to map Subversion committers names to Git committers names and vice versa.
+#
+# This file uses git-svn format, as described at 'http://www.kernel.org/pub/software/scm/git/docs/git-svn.html'
+# and consists of the lines in the following format:
+#
+# svnUser = Git User <user@example.com>
+# 
+# For example
+ShaoguangGuo = shaoguangleo <sgguo@shao.ac.cn>
+
+## CONFIRMED
+AdamDeller = adamdeller <adeller@swin.edu.au>
+CherieDay = CherieDay <cday@swin.edu.au>
+ChrisPhillips = XhrisPhillips <Chris.Phillips@csiro.au>
+CormacReynolds = CormacReynolds <Cormac.Reynolds@csiro.au>
+GeoffreyCrew = gbcrew<gbc@haystack.mit.edu>
+HelgeRottmann = HelgeRottmann <rottmann@mpifr-bonn.mpg.de>
+JanWagner = jwagnerhki <jan.wagner@iki.fi>
+WalterBrisken = wbrisken <wbrisken@aoc.nrao.edu>
+RandallWayth = rbw42 <R.Wayth@curtin.edu.au>
+
+
+## Check emails
+ZhengMeyerZhao = zhengmeyer <zhengmeyerzhao@domain.com>
+
+## TBD
+
+RichardDodson = DiFX-DEV <richard.dodson@uwa.edu.au>
+RogerCappallo = DiFX-DEV <roger.cappallo@gmail.com>
+TonyMaher = DiFX-DEV <tonymaher@domain.com>
+WalterAlef = DiFX-DEV <alef@mpifr-bonn.mpg.de>
+MatteoStagni = DiFX-DEV <MatteoStagni@domain.com>
+JayBlanchard = DiFX-DEV <JayBlanchard@domain.com>
+JamesAnderson = DiFX-DEV <anderson@gfz-potsdam.de>
+DavidGordon = DiFX-DEV <david.gordon-1@nasa.gov>
+FredericJaron = DiFX-DEV <FredericJaron@example.com>
+JohnSpitzak = DiFX-DEV <john.spitzak.ctr@usno.navy.mil>
+LeonidPetrov = DiFX-DEV <LeonidPetrov@atnf.csiro.au>
+MahmoudMahmoud = DiFX-DEV  <MahmoudMahmoud@example.com>
+MarkWainright = DiFX-DEV  <MarkWainright@atnf.csiro.au>
+MatthiasBark = DiFX-DEV <matthiasbark@domain.com>
+MichaelDutka = DiFX-DEV <MichaelDutka@atnf.csiro.au>
+NicolasPradel = DiFX-DEV <septimussonh@gmail.com>
+JohnBarrett = DiFX-DEV <barrettj@mit.edu>
+JimJacobs = DiFX-DEV <jjacobs@nrao.edu>
+JohnMorgan = DiFX-DEV  <mojoh81@gmail.com>
