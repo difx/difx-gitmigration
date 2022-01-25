@@ -140,3 +140,18 @@ Using the configure file in `subgit-mark5access-r2` directory.
 
 This method will generate 477 commits on 27 Oct 2021 with hash code 9ab3d49,
 with 3 branches and no tag at all.
+
+## utilities - r2
+
+OS : Ubuntu 20.04
+
+Trying to migrate utilities using subgit using the following command:
+
+```bash
+$ cat go-utilities.sh
+```
+
+Using the configure file in `subgit-utilities-r1` directory.
+
+This method will generate 722 commits on 28 Oct 2021 with hash code bbc46ae7,
+with 2 branches and no tag at all.
