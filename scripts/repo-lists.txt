@@ -1,0 +1,63 @@
+difx/applications/calcif2	https://svn.atnf.csiro.au/difx/applications/calcif2
+
+difx/applications/datasim	https://svn.atnf.csiro.au/difx/applications/datasim  
+
+difx/applications/difx2mark4	https://svn.atnf.csiro.au/difx/applications/difx2mark4   
+ 
+difx/applications/difxcalc11	https://svn.atnf.csiro.au/difx/applications/difxcalc11    
+   
+difx/applications/espresso	https://svn.atnf.csiro.au/difx/applications/espresso
+      
+difx/applications/hops	https://svn.atnf.csiro.au/difx/applications/hops
+   
+difx/applications/mk5daemon	https://svn.atnf.csiro.au/difx/applications/mk5daemon
+  
+difx/applications/vex2difx	https://svn.atnf.csiro.au/difx/applications/vex2difx
+ 
+difx/applications/calcserver	https://svn.atnf.csiro.au/difx/applications/calcserver
+  
+difx/applications/difx2fits	https://svn.atnf.csiro.au/difx/applications/difx2fits
+    
+difx/applications/difx_monitor	https://svn.atnf.csiro.au/difx/applications/difx_monitor
+  
+difx/applications/difxfilterbank	https://svn.atnf.csiro.au/difx/applications/difxfilterbank
+ 
+difx/applications/guiServer	https://svn.atnf.csiro.au/difx/applications/guiServer
+   
+difx/applications/m6support	https://svn.atnf.csiro.au/difx/applications/m6support
+ 
+difx/applications/polconvert	https://svn.atnf.csiro.au/difx/applications/polconvert
+
+difx/libraries/codifio	https://svn.atnf.csiro.au/difx/libraries/codifio
+
+difx/libraries/difxio	https://svn.atnf.csiro.au/difx/libraries/difxio
+
+difx/libraries/difxmessage	https://svn.atnf.csiro.au/difx/libraries/difxmessage
+
+difx/libraries/dirlist	https://svn.atnf.csiro.au/difx/libraries/dirlist
+
+difx/libraries/mark5access	https://svn.atnf.csiro.au/difx/libraries/mark5access
+
+difx/libraries/mark6meta	https://svn.atnf.csiro.au/difx/libraries/mark6meta
+
+difx/libraries/mark6sg	https://svn.atnf.csiro.au/difx/libraries/mark6sg
+
+difx/libraries/perl	https://svn.atnf.csiro.au/difx/libraries/perl
+
+difx/libraries/python	https://svn.atnf.csiro.au/difx/libraries/python
+
+difx/libraries/vdifio	https://svn.atnf.csiro.au/difx/libraries/vdifio
+
+difx/libraries/vex	https://svn.atnf.csiro.au/difx/libraries/vex
+	
+difx/mpifxcorr	https://svn.atnf.csiro.au/difx/mpifxcorr
+	
+difx/sites/MPIfR	https://svn.atnf.csiro.au/difx/sites/MPIfR
+	
+difx/sites/NRAO	https://svn.atnf.csiro.au/difx/sites/NRAO
+	
+difx/tests/ATNF	https://svn.atnf.csiro.au/difx/tests/ATNF
+
+difx/tests/Synthetic	https://svn.atnf.csiro.au/difx/tests/Synthetic
+
+difx/utilities	https://svn.atnf.csiro.au/difx/utilities

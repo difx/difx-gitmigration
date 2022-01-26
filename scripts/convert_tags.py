@@ -5,7 +5,7 @@ import sys
 
 name= sys.argv[1]
 
-all_tags = "git branch -r | grep {0} | sed 's/{1}\///' > all_branches.txt".format(name,name)
+all_tags = "git branch -r | grep {0} | sed 's/{1}\///' > all_tags.txt".format(name,name)
 os.system(all_tags)
 
 fp = open('all_tags.txt', 'r')
