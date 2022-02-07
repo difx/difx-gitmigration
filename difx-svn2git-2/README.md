@@ -15,9 +15,17 @@ First clone all the repo using :
 bash go-r1.sh
 ```
 
-This is treat all root files as trunk include master_tags, will check all commits.
+This is treat all root files as trunk include master_tags, will grab all commits.
 
 Check https://github.com/difx/difx-svn2git-try5 
+
+### Make tags
+
+```bash
+$ cp scripts/grab_metadata_tags.* difx/master_tags
+$ bash grab_metadata_tags.sh
+# Then you will got all the tags
+```
 
 
 ### Sync
