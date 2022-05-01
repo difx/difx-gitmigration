@@ -26,23 +26,21 @@ RandallWayth = rbw42 <R.Wayth@curtin.edu.au>
 WalterBrisken = wbrisken <wbrisken@aoc.nrao.edu>
 
 
-## Check emails
-ZhengMeyerZhao = zhengmeyer <zhengmeyerzhao@domain.com>
-
 ## TBD
 
-RichardDodson = DiFX-DEV <richard.dodson@uwa.edu.au>
-RogerCappallo = DiFX-DEV <roger.cappallo@gmail.com>
-TonyMaher = DiFX-DEV <tonymaher@domain.com>
-WalterAlef = DiFX-DEV <alef@mpifr-bonn.mpg.de>
-MatteoStagni = DiFX-DEV <MatteoStagni@domain.com>
-JayBlanchard = DiFX-DEV <JayBlanchard@domain.com>
-JamesAnderson = DiFX-DEV <anderson@gfz-potsdam.de>
-DavidGordon = DiFX-DEV <david.gordon-1@nasa.gov>
 FredericJaron = DiFX-DEV <FredericJaron@example.com>
+JamesAnderson = DiFX-DEV <anderson@gfz-potsdam.de>
+JayBlanchard = DiFX-DEV <JayBlanchard@domain.com>
 JohnSpitzak = DiFX-DEV <john.spitzak.ctr@usno.navy.mil>
 LeonidPetrov = DiFX-DEV <LeonidPetrov@atnf.csiro.au>
 MahmoudMahmoud = DiFX-DEV  <MahmoudMahmoud@example.com>
 MarkWainright = DiFX-DEV  <MarkWainright@atnf.csiro.au>
 MatthiasBark = DiFX-DEV <matthiasbark@domain.com>
 MichaelDutka = DiFX-DEV <MichaelDutka@atnf.csiro.au>
+RichardDodson = DiFX-DEV <richard.dodson@uwa.edu.au>
+RogerCappallo = DiFX-DEV <roger.cappallo@gmail.com>
+TonyMaher = DiFX-DEV <tonymaher@domain.com>
+WalterAlef = DiFX-DEV <alef@mpifr-bonn.mpg.de>
+MatteoStagni = DiFX-DEV <MatteoStagni@domain.com>
+DavidGordon = DiFX-DEV <david.gordon-1@nasa.gov>
+ZhengMeyerZhao = zhengmeyer <zhengmeyerzhao@domain.com>
