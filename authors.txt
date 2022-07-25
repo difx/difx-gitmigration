@@ -23,7 +23,7 @@ JohnBarrett = jpbarrett <barrettj@mit.edu>
 JohnMorgan = johnsmorgan <mojoh81@gmail.com>
 NicolasPradel = npradel <septimussonh@gmail.com>
 RandallWayth = rbw42 <R.Wayth@curtin.edu.au>
-WalterBrisken = wbrisken <wbrisken@aoc.nrao.edu>
+WalterBrisken = walterfb <wbrisken@gmail.com>
 
 
 ## TBD
