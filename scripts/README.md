@@ -1,5 +1,13 @@
 # Make release version
 
+## get the seperate version of DiFX utilities
+
+
+```bash
+$ bash go-all.sh 
+
+```
+
 ## Create Branch DXXX and release it
 
 After cherry-pick all the commit, then try to arrange the master_tags/DiFX-RA-1.0.0 on the root path
